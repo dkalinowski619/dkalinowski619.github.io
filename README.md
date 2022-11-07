@@ -1,4 +1,3 @@
-# dkalinowski619.github.io
 # Nagłówek {#identyfikator}  
 |Kolumna jeden | Kolumna dwa| Kolumna trzy |
 |:---------:|:----------:|:-------:|
