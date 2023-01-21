@@ -1,39 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>-999 社会信用积分</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
 </head>
 <body>
-  <h1>Nagłówek 1</h1>
-    <h2>Nagłówek 2</h2>
-<p>Paragraf eins</p>
-<p>Paragraf zwei</p>
-<a href="https://github.com/">Link uno</a>
-</br>
-<a href="https://google.com/">Link dos</a>
-
-<style> td, th { border: 1px solid black; text-align: center} </style>
-
-<table>
-   <thead>
-      <tr> <th> Komórka하 <th>Komórka둘 <th> Komórka셋
-   <tbody>
-      <tr> <th> Produkt하 <td> Wartość 1 <td> Wartość 2
-      <tr> <th> Produkt둘 <td> Wartość 1 <td> Wartość 2
-      <tr> <th> Produkt셋 <td> Wartość 1 <td> Wartość 2
-      <tr> <th> Produkt넷 <td> Wartość 1 <td> Wartość 2
-</table>
-
-<style>
-  div {
-    text-align: center;
-  }
-</style>
-
-<div>
-  <img src="https://previews.123rf.com/images/yayayoy/yayayoy1201/yayayoy120100001/11751026-chinese-emoticon-with-thumb-up.jpg" width="500" height="500"class="center">
-</div>
-
+  <form>
+    <label>Liczba 1: <input type="number" id="num1"></label>
+    <br>
+    <label>Operacja:
+      <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+    </label>
+    <br>
+    <label>Liczba 2: <input type="number" id="num2"></label>
+    <br>
+    <button onclick="calculate(); return false;">Oblicz</button>
+    <p id="result"></p>
+  </form>
 
 </body>
+
 </html>
