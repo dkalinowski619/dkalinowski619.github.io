@@ -1,29 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>ᕦ(ò_óˇ)ᕤ</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>ᕦ(ò_óˇ)ᕤ</title>
 </head>
+
 <body>
-    <form>
-      <label>Liczba:<input type="number" id="num1"></label>
-      <br>
-      <div>
-        <button onclick="selectOperation('+'); return false;">+</button>
-          <button onclick="selectOperation('-'); return false;">-</button>
-          <button onclick="selectOperation('*'); return false;">×</button>
-          <button onclick="selectOperation('/'); return false;">÷</button>
-      </div>
-      <br>
-      <label>Liczba 2:<input type="number" id="num2"></label>
-      <br>
-      <button onclick="calculate(); return false;">=</button>
-      <p id="result"></p>
-    </form>
-  </body>
+  <div class="calc">
+    <div id="result" class="number"></div>
+    <div class="container">
+      <button id="clear" class="item top">C</button>
+      <button id="plusminus" class="item top">+/-</button>
+      <button id="percent" class="item top">%</button>
+      <button id="divide" class="item operation">÷</button>
+      <button id="seven" class="item">7</button>
+      <button id="eight" class="item">8</button>
+      <button id="nine" class="item">9</button>
+      <button id="multiply" class="item operation">×</button>
+      <button id="four" class="item">4</button>
+      <button id="five" class="item">5</button>
+      <button id="six" class="item">6</button>
+      <button id="substract" class="item operation">-</button>
+      <button id="one" class="item">1</button>
+      <button id="two" class="item">2</button>
+      <button id="three" class="item">3</button>
+      <button id="four" class="item operation">+</button>
+      <button id="zero" class="item">0</button>
+      <button id="comma" class="item">,</button>
+      <button id="equals" class="item operation">=</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById("one").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "1";
+    });
+
+    document.getElementById("two").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "2";
+    });
+
+    document.getElementById("three").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "3";
+    });
+
+    document.getElementById("four").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "4";
+    });
+
+    document.getElementById("five").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "5";
+    });
+
+    document.getElementById("six").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "6";
+    });
+
+    document.getElementById("seven").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "7";
+    });
+
+    document.getElementById("eight").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "8";
+    });
+
+    document.getElementById("nine").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "9";
+    });
+
+    document.getElementById("zero").addEventListener("click", function () {
+      document.getElementById("result").innerHTML += "0";
+    });
+    document.getElementById("clear").addEventListener("click", function () {
+      document.getElementById("result").innerHTML = "";
+    });
+  </script>
+</body>
 
 </html>
