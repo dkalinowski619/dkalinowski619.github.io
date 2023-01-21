@@ -25,11 +25,11 @@
       <button id="four" class="item">4</button>
       <button id="five" class="item">5</button>
       <button id="six" class="item">6</button>
-      <button id="substract" class="item operation">-</button>
+      <button id="subtract" class="item operation">-</button>
       <button id="one" class="item">1</button>
       <button id="two" class="item">2</button>
       <button id="three" class="item">3</button>
-      <button id="four" class="item operation">+</button>
+      <button id="add" class="item operation">+</button>
       <button id="zero" class="item">0</button>
       <button id="comma" class="item">,</button>
       <button id="equals" class="item operation">=</button>
@@ -109,17 +109,87 @@
 
     document.getElementById("comma").addEventListener("click", function () {
       if (!commaUsed) {
-        document.getElementById("result").innerHTML += ",";
+        document.getElementById("result").innerHTML += ".";
         commaUsed = true;
       }
     });
 
     document.getElementById("clear").addEventListener("click", function () {
-
       document.getElementById("result").innerHTML = "0";
       commaUsed = false;
-
     });
+    document.getElementById("multiply").addEventListener("click", function () {
+      document.getElementById("multiply").classList.add("clicked");
+    });
+    document.getElementById("divide").addEventListener("click", function () {
+      document.getElementById("divide").classList.add("clicked");
+    });
+    document.getElementById("add").addEventListener("click", function () {
+      document.getElementById("add").classList.add("clicked");
+    });
+    document.getElementById("subtract").addEventListener("click", function () {
+      document.getElementById("subtract").classList.add("clicked");
+    });
+    let firstNumber = 0;
+    let secondNumber = 0;
+    let operator = "";
+
+    document.getElementById("add").addEventListener("click", function () {
+      firstNumber = document.getElementById("result").innerHTML;
+      operator = "+";
+      document.getElementById("result").innerHTML = "0";
+    });
+
+    document.getElementById("equals").addEventListener("click", function () {
+      secondNumber = document.getElementById("result").innerHTML;
+      if (operator === "+") {
+        document.getElementById("result").innerHTML = parseFloat(firstNumber) + parseFloat(secondNumber);
+      }
+    });
+    document.getElementById("clear").addEventListener("click", function () {
+      document.getElementById("result").innerHTML = "0";
+      firstNumber = 0;
+      secondNumber = 0;
+      operator = "";
+    });
+
+    document.getElementById("multiply").addEventListener("click", function () {
+      firstNumber = document.getElementById("result").innerHTML;
+      operator = "*";
+      document.getElementById("result").innerHTML = "0";
+    });
+
+    document.getElementById("equals").addEventListener("click", function () {
+      secondNumber = document.getElementById("result").innerHTML;
+      if (operator === "*") {
+        document.getElementById("result").innerHTML = parseFloat(firstNumber) * parseFloat(secondNumber);
+      }
+    });
+    document.getElementById("subtract").addEventListener("click", function () {
+      firstNumber = document.getElementById("result").innerHTML;
+      operator = "-";
+      document.getElementById("result").innerHTML = "0";
+    });
+
+    document.getElementById("equals").addEventListener("click", function () {
+      secondNumber = document.getElementById("result").innerHTML;
+      if (operator === "-") {
+        document.getElementById("result").innerHTML = parseFloat(firstNumber) - parseFloat(secondNumber);
+      }
+    });
+    document.getElementById("divide").addEventListener("click", function () {
+      firstNumber = document.getElementById("result").innerHTML;
+      operator = "/";
+      document.getElementById("result").innerHTML = "0";
+    });
+
+    document.getElementById("equals").addEventListener("click", function () {
+      secondNumber = document.getElementById("result").innerHTML;
+      if (operator === "/") {
+        document.getElementById("result").innerHTML = parseFloat(firstNumber) / parseFloat(secondNumber);
+      }
+    });
+
   </script>
 </body>
 
