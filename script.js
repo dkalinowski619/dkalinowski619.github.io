@@ -1,7 +1,12 @@
+var operation = "";
+  
+function selectOperation(op) {
+  operation = op;
+}
+
 function calculate() {
   var num1 = document.getElementById("num1").value;
   var num2 = document.getElementById("num2").value;
-  var operation = document.getElementById("operation").value;
   var result = document.getElementById("result");
   var finalResult;
 
