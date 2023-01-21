@@ -1,0 +1,33 @@
+button {
+    font-size: 300%;
+    cursor: pointer;
+    background-color: rgb(255, 117, 244);
+    border: none;
+    width: 3em;
+    height: 2em;
+    border-radius: 2em;
+}
+
+button:hover {
+    background-color: rgb(182, 74, 173);
+}
+
+body {
+
+    background-color: rgb(224, 255, 183);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+label {
+    font-size: 300%;
+
+}
+input {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 40em;
+    height: 7em;
+}
